@@ -4,7 +4,7 @@
        v-for="post in posts" class="post">  
 
                   <div class="user-info"> 
-                    <!-- <a href="#" class="user-name">{{ userById(post.userId).name}}</a> -->
+                    <!-- <a href="#" class="user-name">{{ userById(post.userId).name}}</a>gi -->
                        
 
                       <a href="#"> 

@@ -52,7 +52,7 @@ const routes = [
           {
             path: '/category/:id',
             name: 'categoryApp',
-            components: CategoryApp,
+            component: CategoryApp,
             props: true
           },
           {

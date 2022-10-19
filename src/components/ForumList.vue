@@ -2,10 +2,10 @@
 <div class="col-full">
     <div class="forum-list">
 
-              <h2 class="list-title">
+               <h2 class="list-title">
                   <router-link v-if="categoryId" :to="{name: 'categoryApp', params: {id: categoryId} }">{{ title }}</router-link>
                   <span v-else>{{ title }}</span>
-                </h2>
+                </h2> 
                 <div class="forum-listing" v-for="forum in forums" :key="forum.id" >
                   <div class="forum-details"> 
                        <router-link :to="{name: 'forumShow', params: {id: forum.id} }" 

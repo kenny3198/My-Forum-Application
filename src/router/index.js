@@ -51,7 +51,7 @@ const routes = [
           },
           {
             path: '/category/:id',
-            name: 'CategoryApp',
+            name: 'categoryApp',
             components: CategoryApp,
             props: true
           },

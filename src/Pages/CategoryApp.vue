@@ -23,7 +23,7 @@ computed: {
 },
 methods: {
    getForumsForCategory(category) {
-            return this.$store.state.forums.filter(forum => forum.categoryId === category.id)
+    return this.$store.state.forums.filter(forum => forum.categoryId === category.id)
   
 }
 }

@@ -51,7 +51,7 @@ export default {
     },
    methods: {
     postById(postId) {
-        return this.posts.find(p => p.id === postId)
+        return this.posts.find(post => post.id === postId)
     }, 
     userById(userId) {
         return this.users.find(p => p.id === userId)

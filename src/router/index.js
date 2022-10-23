@@ -6,6 +6,7 @@ import ForumShow from '@/Pages/ForumShow'
 import CategoryApp from '@/Pages/CategoryApp'
 import ProfileApp from '@/Pages/ProfileApp'
 import ThreadCreate from '@/Pages/ThreadCreate'
+import ThreadEdit from '@/Pages/ThreadEdit'
 
 const routes = [
     {
@@ -44,11 +45,18 @@ const routes = [
           //  }
           },
           {
-            path: '/form/:forumId/thread/create',
+            path: '/forum/:forumId/thread/create',
             name: 'ThreadCreate',
             component:ThreadCreate,
             props: true
           },
+          {
+            path: '/thread/:id/edit',
+            name: 'ThreadEdit',
+            component:ThreadEdit,
+            props: true
+          },
+        
           {
             path: '/category/:id',
             name: 'categoryApp',

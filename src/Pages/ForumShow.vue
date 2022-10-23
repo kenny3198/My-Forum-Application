@@ -31,6 +31,7 @@ computed:{
     
     },
     threads() {
+        // return this.forum.threads.map(threadId => this.$store.getters.thread(threadId))
    return this.$store.state.threads.filter(thread => thread.forumId === this.id)
     }
 }

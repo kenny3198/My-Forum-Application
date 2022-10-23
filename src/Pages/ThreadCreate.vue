@@ -1,31 +1,24 @@
 <template>
   <div class="col-full push-top">
 
-          <h1>Create new thread in <i>{{forum.name}}</i></h1>
+          <h1>Create new thread in <i>{{forum.name}}</i> </h1>
 
-          <form @submit.prevent="save">
-              <div class="form-group">
-                <label for="thread_title">Title:</label>
-                <input v-model="title" type="text" id="thread_title" class="form-input" name="title" >
-              </div>
-
-              <div class="form-group">
-                 <label for="thread_content">Content:</label>
-                <textarea  v-model="text" id="thread_content" class="form-input" name="content" rows="8" cols="140"></textarea>
-              </div>
-
-              <div class="btn-group">
-                <button @click="cancel" class="btn btn-ghost">Cancel</button>
-                <button class="btn btn-blue" type="submit" name="Publish">Publish </button>
-              </div>
-          </form>
+          <ThreadEditor @save='save' @cancel='cancel'/>
       </div>
 </template>
 
 <script>
+import ThreadEditor from '@/components/ThreadEditor'
 export default {
+  components: { ThreadEditor},
   props: {
     forumId: { type: String, required: true }
+  },
+  computed : {
+    forum() {
+     return this.$store.state.forums.find(forum => forum.id === this.forumId)
+    }
+   
   },
   data() {
     return {
@@ -34,13 +27,13 @@ export default {
     }
   },
   methods: {
-   async save() {
-       this.$store.dispatch('createThread', {
+   async save({ title, text}) {
+     const thread = await this.$store.dispatch('createThread', {
             forumId: this.forum.id,
-            title: this.title,
-            text: this.text
+            title,
+            text
         })
-        // this.$router.push({ name: 'ThreadShow', params: {id: thread.id}})
+        this.$router.push({ name: 'ThreadShow', params: {id: thread.id}})
       
    
     },
@@ -48,12 +41,7 @@ export default {
         this.$router.push({ name: 'forumShow', params: {id: this.forum.id}})
     }
   },
-  computed : {
-    forum() {
-     return this.$store.state.forums.find(forum => forum.id === this.forumId)
-    }
-   
-  }
+  
 }
 </script>
 

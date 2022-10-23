@@ -9,7 +9,7 @@
 <script>
 import ForumList from '@/components/ForumList'
 export default {
-    componemts: { ForumList },
+    components: { ForumList },
 props: {
     id: {
         required: true,

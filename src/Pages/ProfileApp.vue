@@ -18,7 +18,7 @@
 
               <hr>
 
-              <PostList :posts="user.Posts"/>
+              <PostList :posts="user.posts"/>
           </div>
       </div>
   </div>

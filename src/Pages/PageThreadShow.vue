@@ -3,16 +3,18 @@
     <h1> 
 
       {{ thread.title }}
+
       <router-link :to="{name: 'ThreadEdit', id: this.id}"
                 class="btn-green btn-small" 
-                tags="button">
+                tags="button"
+                >
                 Edit a thread </router-link>
       </h1>
       <p>
         <a href="#" class="linked-unstyled">{{thread.author.name}}</a>, <AppDate :timestamp="thread.publishedAt"/>
         <span style="float: Right; margin-top: 2px;"
          class="hide-mobile text-faded text-small">{{thread.repliesCount}} 
-          replies by {{thread.contributors.length}} contributors</span>
+          replies by {{ thread.contributors.length }} contributors</span>
       </p>
 
     <PostList :posts="threadPosts"/>

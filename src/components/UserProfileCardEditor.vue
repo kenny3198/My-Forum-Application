@@ -19,8 +19,8 @@
             </div>
 
             <div class="stats">
-                <span>{{user.PostCount}} posts</span>
-                <span>{{user.ThreadCount}} threads</span>
+                <span>{{user.PostsCount}} posts</span>
+                <span>{{user.ThreadsCount}} threads</span>
             </div>
 
             <hr>

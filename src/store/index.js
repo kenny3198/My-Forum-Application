@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+ import { createStore } from 'vuex'
 
 import sourceData from '@/data.json'
 
@@ -14,9 +14,9 @@ export default createStore({
       authUser: (state, getters) => {
         return getters.user(state.authId)
     },
-    user: state => {
+     user: state => {
       return (id) => {
-        const user = findById(state.users, id)
+      const user = findById(state.users, id)
         if (!user) return null 
         return {
           ...user,
@@ -26,9 +26,9 @@ export default createStore({
         },
         //auth user.postCount
         get postsCount() {
-            return this.posts.length
+            return this.posts.length 
         },
-        get threads() {
+          get threads() {
             return state.threads.filter(thread => thread.userId === user.id)
         },
         get threadsCount() {

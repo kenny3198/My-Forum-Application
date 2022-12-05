@@ -4,17 +4,15 @@
        v-for="post in posts" class="post">  
 
                   <div class="user-info"> 
-                    <a href="#" class="user-name">{{userById(post.userId).name}}</a>
+                    <!-- <a href="#" class="user-name">{{userById(post.userId).name}}</a> -->
                        
 
                       <a href="#"> 
-                          <img class="avatar-large" :src="userById(post.userId).avatar" alt="">
+                          <!-- <img class="avatar-large" :src="userById(post.userId).avatar" alt=""> -->
                       </a>
                             
-      
-
-                       <p class="desktop-only text-small">{{userById(post.userId).PostsCount}} posts</p>
-                        <p class="desktop-only text-small">{{userById(post.userId).threadsCount}} threads</p>
+                       <!-- <p class="desktop-only text-small">{{ userById(post.userId).postsCount }} posts</p> -->
+                        <!-- <p class="desktop-only text-small">{{ userById(post.userId).threadsCount }} threads</p> -->
                 </div>
 
                    <div class="post-content"> 
@@ -46,7 +44,7 @@ export default {
     
     methods: {
     userById (userId) {
-    //  return this.users.find(post => post.id === userId)
+
         return this.$store.getters.user(userId)        
     },
     
@@ -55,7 +53,7 @@ export default {
     computed: {
         users() {
         return this.$store.state.users
-        
+          
         }
         
         

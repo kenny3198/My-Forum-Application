@@ -36,28 +36,7 @@
                 </div>
             </li>
         </ul>
-<!-- 
-        <ul>
-            <li class="navbar-item">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="navbar-item">
-                <a href="category.html">Category</a>
-            </li>
-            <li class="navbar-item">
-                <a href="forum.html">Forum</a>
-            </li>
-            <li class="navbar-item">
-                <a href="thread.html">Thread</a>
-            </li>
-             Show these option only on mobile-->
-            <!-- <li class="navbar-item mobile-only"> -->
-                <!-- <a href="profile.html">My Profile</a> -->
-            <!-- </li> -->
-            <!-- <li class="navbar-item mobile-only"> -->
-                <!-- <a href="#">Logout</a> -->
-            <!-- </li> -->
-        <!-- </ul>  -->
+
     </nav>
   </header>
 </template>

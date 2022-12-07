@@ -6,3 +6,8 @@ module.exports = {
     messagingSenderId: "694303572543",
     appId: "1:694303572543:web:021296e11bae36d1dfee8a"
   };
+
+
+  // Module not found: Error: Package path . 
+  // is not exported from package C:\Users\hp\my-vueproject\node_modules\firebase 
+  // (see exports field in C:\Users\hp\my-vueproject\node_modules\firebase\package.json)

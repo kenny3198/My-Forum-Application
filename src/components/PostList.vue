@@ -4,15 +4,20 @@
        v-for="post in posts" class="post">  
 
                   <div class="user-info"> 
-                    <!-- <a href="#" class="user-name">{{userById(post.userId).name}}</a> -->
-                       
+                    <a href="#" class="user-name">{{userById(post.userId).name}}</a>
+                    <!-- erorr- shown -->
+                        <!-- could not read property of undefine reading name -->
 
                       <a href="#"> 
-                          <!-- <img class="avatar-large" :src="userById(post.userId).avatar" alt=""> -->
+                          <img class="avatar-large" :src="userById(post.userId).avatar" alt="">
+                          <!-- erorr- shown -->
+                          <!-- could not read property of undefined reading avatar -->
                       </a>
                             
-                       <!-- <p class="desktop-only text-small">{{ userById(post.userId).postsCount }} posts</p> -->
-                        <!-- <p class="desktop-only text-small">{{ userById(post.userId).threadsCount }} threads</p> -->
+                       <p class="desktop-only text-small">{{ userById(post.userId).postsCount }} posts</p>
+                        <p class="desktop-only text-small">{{ userById(post.userId).threadsCount }} threads</p>
+                        <!-- erorr-shown -->
+                        <!-- could not read proprty of undefined reading postsCount and thredsCount -->
                 </div>
 
                    <div class="post-content"> 
@@ -58,9 +63,7 @@ export default {
         
         
             },
-            // created() {
-            //   console.log(this.posts)
-             // }
+            
      
 }
 </script>

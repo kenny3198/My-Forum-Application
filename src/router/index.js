@@ -7,6 +7,10 @@ import CategoryApp from '@/Pages/CategoryApp'
 import ProfileApp from '@/Pages/ProfileApp'
 import ThreadCreate from '@/Pages/ThreadCreate'
 import ThreadEdit from '@/Pages/ThreadEdit'
+import createAccount from '@/Pages/createAccount'
+import firebase from "../config/firebase"
+// import HomeView from "@/views/HomeView"
+// import TheNavBar from "@/components/TheNavBar"
 
 const routes = [
     {
@@ -14,6 +18,12 @@ const routes = [
          name : "Home",
           component: PageHome,
          },
+         
+         {
+          path: '/createAccount',
+          name : "createAccount",
+           component: createAccount ,
+          },
          {
           path: '/profile',
           name : "profile",
@@ -85,6 +95,15 @@ const router = createRouter({
     if(to.meta.top) scroll.top = 0
     if(to.meta.smoothScroll) scroll.behaviour = "smooth"
     return scroll
+  }
+})
+router.beforeEach((to, from, next ) => {
+  const requiredAuth = to.matched.some(record => record.meta.requiredAuth);
+  const isAuthenticated = firebase.auth().currentUser
+  if(requiredAuth && !isAuthenticated) {
+    next("./createAccount")
+  } else {
+    next()
   }
 })
  

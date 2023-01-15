@@ -32,7 +32,7 @@ import { mapGetters } from 'vuex'
 import UserProfileCardEditor from '@/components/UserProfileCardEditor'
 export default {
     props: {
-        edit:{ type: Boolean, default: false}
+        edit:{ type: Boolean, default: false }
     },
 components: { PostList, ProfileCardUser, UserProfileCardEditor },
 computed: {

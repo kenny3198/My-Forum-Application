@@ -1,5 +1,6 @@
 <template>
-<the-nav-bar/>
+<!-- <create-account/> -->
+<TheNavBar/>
   <div class="container">
       <router-view/>
   </div>
@@ -8,16 +9,23 @@
 
 <script>
 import TheNavBar from './components/TheNavBar.vue'
+// import createAccount from "@/Pages/createAccount"
 
 export default {
   name: 'App',
+  data() {
+    return {
+    
+    }
+  },
   components: {
-    TheNavBar
+    TheNavBar,
+    // createAccount
   }
 }
 </script>
 
-    TheNavBar
+     TheNavBar
 <style>
 @import "assets/style.css";
-</style>
+ </style>

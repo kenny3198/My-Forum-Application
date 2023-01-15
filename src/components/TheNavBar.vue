@@ -2,7 +2,7 @@
   <header class="header" id="header">
 
         <router-link :to="{ name: 'Home'}" class="logo">
-            <img src="/assets/svg/vueseschool-logo-vue.svg" >
+            <img src="../assets/svg/vue-school-logo.jpg" >
         </router-link>
 
         <div class="btn-hamburger">
@@ -21,7 +21,7 @@
                     <img class="avatar-small" :src="authUser.avatar" :alt="`${authUser.name} profile picture`">
                     <span>
                         {{authUser.name}}
-                        <img class="icon-profile" src="/assets/svg/arrow-profile.svg" alt="">
+                        <img class="icon-profile" src="../assets/svg/arrow-down.png" alt="">
                     </span>
                 </router-link>
 

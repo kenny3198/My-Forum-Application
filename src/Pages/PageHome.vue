@@ -1,10 +1,16 @@
 <template>
 <h2 class="push-top">Welcome to the Forum</h2>
 <CategoryList :categories="categories "/>
+
 </template>
 <script>
 import CategoryList from '@/components/CategoryList'
 export default {
+    data() {
+        return {
+
+        }
+    },
     components: {
         CategoryList
     },
@@ -14,7 +20,8 @@ export default {
             return this.$store.state.categories
         },
          
-    }
+    },
+
       
      }
  

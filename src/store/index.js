@@ -99,7 +99,7 @@ export default createStore({
      dispatch('createPost', {text, threadId: id }) 
      return findById(state.threads, id)
       },
-      async updateThread({ commit, state }, { title, text, id}){
+      async updateThread({ commit, state }, { title, text, id }) {
         const thread = findById(state.threads, id)
         const post = findById(state.posts, thread.posts[0])
         const newThread = { ...thread, title } 

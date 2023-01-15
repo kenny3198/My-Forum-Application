@@ -1,4 +1,6 @@
-module.exports = {
+import "firebase/compat/auth" 
+import firebase from "firebase/compat/app"
+const firebaseConfig = {
     apiKey: "AIzaSyDer5f21ClDgCyERJs1NVzfHLtPQK89iE0",
     authDomain: "my-vueproject-b09e4.firebaseapp.com",
     projectId: "my-vueproject-b09e4",
@@ -7,7 +9,10 @@ module.exports = {
     appId: "1:694303572543:web:021296e11bae36d1dfee8a"
   };
 
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
 
+ export default firebase;
   // Module not found: Error: Package path . 
   // is not exported from package C:\Users\hp\my-vueproject\node_modules\firebase 
   // (see exports field in C:\Users\hp\my-vueproject\node_modules\firebase\package.json)
